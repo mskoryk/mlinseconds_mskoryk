@@ -1,0 +1,9 @@
+The work log for the week2 problem (helloXor in 10 steps):
+* grid search over the following parameters:
+	** learning rate, weight decay, momentum
+* try different optimizer (Adam)
+* try different loss function (log-loss)
+* try different activation functions (tanh, relu and sigmoid)
+* try different coefficients inside the activation functions
+
+It leads to a solution of 4.8 steps
