@@ -1,0 +1,20 @@
+First, I tried 1-2 hidden layer networks with different hidden sizes, activation functions (relu, tahn, sigmoid), loss functions (BCELoss, mse, logloss) and tried two optimizers (SGD and Adam), set solution here is 40 steps.
+Second, I tried usage of 5+ hidden layers I got stuck because no solution converged. I didn't know about some techniques to get the network converge (weight initialization and batch normalization) and spent much time tuning learning rates, etc without much result. Then I watched videos by Andrew Ng about weight initialization, so I used it and it reduced number of steps to 20. Then I googled and found something about batch normalization. I watched video of Andrew Ng, applied bn, and then fine-tuned some parameters and got the solution with 7.5 steps.
+
+
+1,2-layer network -  best solution 40 steps, hidden_size=1000, relu, BCELoss, SGD
+
+Then 5-layer network
+Didn't converge, need to apply some technics
+
+** SGD seems to work slower than ADAM, use ADAM
+1) weight initialization
+	* hidden_size=20, best solution is 34 (relu, kaiming_uniform weight initialization, BCELoss)
+	* hidden_size=45, best solution is 20 (relu, kaiming_uniform weight initialization, BCELoss)
+2) Batch normalization
+	* hidden_size=20, best solution is 13 (relu, kaiming_uniform weight initialization, BCELoss)
+	* hidden_size=45, best solution is 7.6 (relu, kaiming_uniform weight initialization, BCELoss)
+		this solution with SGD is 18.1 steps
+
+
+
