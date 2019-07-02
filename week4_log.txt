@@ -1,0 +1,5 @@
+* copied solution from the previous problem and reworked it so that it is easier to control number of hidden layers (nn.ModeleList)
+* analyzed the data creation. Because of the random features I got the idea that dropout might help, so I added dropout to input layer and hidden layers
+* with dropout you can not evaluate a model correctly in a 'train' mode, so I added piece of code to switch to 'eval' mode, evaluate model and then switch back to 'train' mode
+* discovered that criteria 'correct == total' is not enough for stop of the training, so I removed it and left only the time criteria
+* grid searched over number of layers / learning rate / hidden size / dropout coefficients / weight decay and got the solution.
