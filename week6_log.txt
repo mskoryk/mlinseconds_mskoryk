@@ -1,0 +1,6 @@
+- spent some time on undestanding what data is provided
+- mnist is a famous dataset and CNN are known to perform well on this dataset. As a base model I took LeCun5 network
+- spent some time on case #2 where only cases with labels 8 and 9 are given (added recoding)
+- By tuning learning rate and batch_size, I managed to pass tests #1 and #2 with 2.0 seconds time limit and all other with 4.0 seconds time limit on my local machine 
+- Moved to google colab in order to use GPU. Made some adjustments to the code. Managed to pass all tests
+- Tuned learning rate, hidden sizes of linear layers and batch size to increase mean test accuracy
