@@ -1,0 +1,6 @@
+- examined data generation and realized that Hidden Markov Models can be useful here. Researched a bit on this topic but haven't found any easy implementation of HMMs
+- stumbled upon an article "CLASSIFYING NAMES WITH A CHARACTER-LEVEL RNN" where names are classified into languages of origin. This task is very similar to the bb8, so I chose this model as a base model. It is RNN model with a one layer hidden state.
+- updated the solution according to the bb8 data.
+- tuned learning rate, scheduler, optimizer, batch size, hidden size, experimented with two layer hidden state, added stoppage criteria (small epoch loss). I managed to pass 5 cases in 5 seconds
+- moved from local machine to google colab using GPU and got 5 first cases passed within 2 seconds limit
+- for the first 5 cases the starting epoch training loss is around 0.7 and goes down to 0.3-0.45 and that's enough to get at least 0.8 test accuracy. Unfortunately, I didn't manage to get working solutions for the remaining 5 cases where the loss remained within 0.7-0.65 range. I assume that there is a problem with vanishing gradients (the length of a sequence is 256 here). I tried batch norm, however, it slows down the training process significantly and I have twice fewer steps with batch norm and this makes no good. If anyone has ideas how to improve the solution, I'd be grateful.
